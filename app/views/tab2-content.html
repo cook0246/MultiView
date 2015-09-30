@@ -1,0 +1,15 @@
+<div>
+    <h1 class="jumbotron">List 2</h1>
+</div>
+
+ <input type="text" ng-model="newTask.text" placeholder="Enter a new task..."> 
+    <button ng-click="addTask()">Add</button>
+    <ul> 
+      <li ng-repeat="task in $local.list2 track by $index"> 
+        {{task.text}} <button ng-click="deleteTask($index)">Remove</button>
+      </li>
+    </ul> 
+
+<div ui-view>
+
+</div>
